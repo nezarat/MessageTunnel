@@ -172,6 +172,8 @@
       defend, and hold each Contributor harmless for any liability
       incurred by, or claims asserted against, such Contributor by reason
       of your accepting any such warranty or additional liability.
+      
+   10. You should not remove my name and email from source code when you modify it or distribute it.   
 
    END OF TERMS AND CONDITIONS
 
@@ -186,7 +188,7 @@
       same "printed page" as the copyright notice for easier
       identification within third-party archives.
 
-   Copyright [yyyy] [name of copyright owner]
+   Copyright [2018] [Mohammad Nezarat]
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
