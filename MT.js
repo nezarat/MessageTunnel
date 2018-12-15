@@ -2,7 +2,7 @@
  * Created by Mohammad Nezarat on 12/15/2018.
  * nezarat@gmail.com
  * Lic Apache License v2
- * version: 0.1
+ * version: 0.1.1
  * https://github.com/nezarat/MessageTunnel
  */
 class MT {
@@ -30,12 +30,13 @@ class MT {
         ch.subscribers = [];
     }
 
-    static Dispatch(channel, envelope ) {
+    static Dispatch(channel, envelope) {
         let ch = this._GetChannel(channel);
         for (let key in ch.subscribers) {
             if (ch.subscribers.hasOwnProperty(key)) {
-                let subscription =  ch.subscribers[key];
-                subscription.callback(envelope);
+                let subscription = ch.subscribers[key];
+                if (subscription.callback && typeof subscription.callback === "function")
+                    subscription.callback(envelope);
             }
         }
     }
