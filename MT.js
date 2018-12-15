@@ -3,21 +3,23 @@
  * nezarat@gmail.com
  * Lic Apache License v2
  * version: 0.1
+ * https://github.com/nezarat/MessageTunnel
  */
 class MT {
     static Subscribe(channel, callback) {
         let ch = this._GetChannel(channel);
         let subscription = {
             id: "s" + (ch.counter++),
-            callback: callback
+            callback: callback,
+            channel: channel
         };
         ch.subscribers[subscription.id] = subscription;
         return subscription;
     }
 
-    static Unsubscribe(subscription, channel) {
-        if (subscription.id) {
-            let ch = this._GetChannel(channel);
+    static Unsubscribe(subscription) {
+        if (subscription.id && subscription.channel) {
+            let ch = this._GetChannel(subscription.channel);
             ch.subscribers[subscription.id] = null;
         }
     }
