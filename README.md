@@ -1,11 +1,14 @@
 # MessageTunnel
-Very simple and lightweight message tunnel for sending and receiving events between components in ReactJS
 
-## How to install
+Very simple and lightweight message tunnel for sending and receiving events between components in ReactJS.
+
+I dont like complex libs for such a simple things, therefore I developed this library in some minutes :) Enjoy!
+
+## How to install?
 
 download latest MT.js and save it into your src folder! Done! No dependency! 100% standalone and just about 100 lines of code!
 
-## How to Use it
+## How to use it?
 
 1- Import it!
 
